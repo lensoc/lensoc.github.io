@@ -635,11 +635,22 @@ color: orangered;
 
 #photologo25
 {
+	border: 3px;
 z-index: 101;
 	margin-top: 5vh;
 	float:left;
     width:25%;
 
+}
+
+#mobilebit
+{
+position:relative; left:0px;
+}
+
+#mobilelogo
+{
+position:relative; right:0px;
 }
 
 #botomlogo
