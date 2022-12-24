@@ -45,10 +45,10 @@
 
 <section id="fullboxlogos">
   <div id="photologo25">
-<a href="" target="_blank"><img src="img\bit.png"></a>
+<a href="" target="_blank"><img src="img\bit.png" id="mobilebit"></a>
   </div>
   <div id="photologo25">
-<a href="" target="_blank"><img src="img\logo_2.png"></a>
+<a href="" target="_blank"><img src="img\logo_2.png" id="mobilelogo"></a>
   </div>
     
 </section>
@@ -326,6 +326,9 @@
   let logo2 = document.getElementById('logopng2')
   let logo3 = document.getElementById('logopng3')
   let logo4 = document.getElementById('logopng4')
+  let mlogo = document.getElementById('mobilelogo')
+    let mbit = document.getElementById('mobilebit')
+
 window.addEventListener('scroll',function(){
 	let value = window.scrollY;
 
@@ -345,6 +348,12 @@ logo3.style.left = Math.max(20, 300 - value * 0.4) + 'px';
 logo4.style.left = Math.max(20, 440 - value * 0.6) + 'px';
 logo2.style.opacity = 1-value*0.001;
 logo4.style.opacity = 1-value*0.001;
+}
+
+
+if (window.innerWidth<750){
+mlogo.style.width = Math.min(80,Math.max(0, 80 - value*0.25)) + '%';
+mbit.style.width = Math.min(80,Math.max(0, 80 - value*0.25)) + '%';
 }
 
 fg.style.top =  value * 0 +'px';
